@@ -1,0 +1,42 @@
+(qiime1) Aditi-Arya:desktop Aditi$ cd CDS
+(qiime1) Aditi-Arya:CDS Aditi$ ls
+2016				2016_stdout			2017_cr_nojoin_no_golay.sh	README.md			merged_otu_table.biom
+2016_cr_join_no_golay.sh	2017				2017_stdout			merge_otu_tables.sh
+(qiime1) Aditi-Arya:CDS Aditi$ biom summarize-table -i merged_otu_table.biom -o merged_otu_table_summary.txt
+(qiime1) Aditi-Arya:CDS Aditi$ core_diversity_analyses.py -o CDS/Analysis_output -i merged_otu_table.biom -m map.tsv_corrected.txt -t 97_otus.tree.txt -e 371590 --recover_from_failure
+Error in core_diversity_analyses.py: option -m: file does not exist: 'map.tsv_corrected.txt'
+
+If you need help with QIIME, see:
+http://help.qiime.org
+(qiime1) Aditi-Arya:CDS Aditi$ core_diversity_analyses.py -o CDS/Analysis_output -i merged_otu_table.biom -m CDS/2016/map.tsv_corrected.txt -t 97_otus.tree.txt -e 371590 --recover_from_failure
+Error in core_diversity_analyses.py: option -m: file does not exist: 'CDS/2016/map.tsv_corrected.txt'
+
+If you need help with QIIME, see:
+http://help.qiime.org
+(qiime1) Aditi-Arya:CDS Aditi$ core_diversity_analyses.py -o CDS/Analysis_output -i merged_otu_table.biom -m mapping_file.txt -t 97_otus.tree.txt -e 371590 --recover_from_failure
+Error in core_diversity_analyses.py: option -m: file does not exist: 'mapping_file.txt'
+
+If you need help with QIIME, see:
+http://help.qiime.org
+(qiime1) Aditi-Arya:CDS Aditi$ core_diversity_analyses.py -o CDS/Analysis_output -i merged_otu_table.biom -m CDS/2016/map/map.tsv_corrected.txt -t 97_otus.tree.txt -e 371590 --recover_from_failure
+Error in core_diversity_analyses.py: option -m: file does not exist: 'CDS/2016/map/map.tsv_corrected.txt'
+
+If you need help with QIIME, see:
+http://help.qiime.org
+(qiime1) Aditi-Arya:CDS Aditi$ core_diversity_analyses.py -o CDS/Analysis_output -i merged_otu_table.biom -m 2016/map/map.tsv_corrected.txt -t 97_otus.tree.txt -e 371590 --recover_from_failure
+Error in core_diversity_analyses.py: option -t: file does not exist: '97_otus.tree.txt'
+
+If you need help with QIIME, see:
+http://help.qiime.org
+(qiime1) Aditi-Arya:CDS Aditi$ core_diversity_analyses.py -o CDS/Analysis_output -i merged_otu_table.biom -m 2016/map/map.tsv_corrected.txt -t 2016/otus/97_otus.tree.txt -e 371590 --recover_from_failure
+Error in core_diversity_analyses.py: option -t: file does not exist: '2016/otus/97_otus.tree.txt'
+
+If you need help with QIIME, see:
+http://help.qiime.org
+(qiime1) Aditi-Arya:CDS Aditi$ core_diversity_analyses.py -o CDS/Analysis_output -i merged_otu_table.biom -m 2016/map/map.tsv_corrected.txt -t 2016/otus/97_otus.tree -e 371590 --recover_from_failure
+/Users/Aditi/miniconda2/envs/qiime1/lib/python2.7/site-packages/skbio/stats/ordination/_principal_coordinate_analysis.py:107: RuntimeWarning: The result contains negative eigenvalues. Please compare their magnitude with the magnitude of some of the largest positive eigenvalues. If the negative ones are smaller, it's probably safe to ignore them, but if they are large in magnitude, the results won't be useful. See the Notes section for more details. The smallest eigenvalue is -0.00125591675728 and the largest is 0.22958683888.
+  RuntimeWarning
+/Users/Aditi/miniconda2/envs/qiime1/lib/python2.7/site-packages/matplotlib/collections.py:590: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  if self._edgecolors == str('face'):
+/Users/Aditi/miniconda2/envs/qiime1/lib/python2.7/site-packages/matplotlib/collections.py:590: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  if self._edgecolors == str('face'):
